@@ -1,0 +1,94 @@
+/* Partner app */
+
+:root {
+  --phub: #0f766e; --phub-bg: #ccfbf1;
+  --pqueue: #7c3aed; --pqueue-bg: #ede9fe;
+  --pservice: #2563eb;
+  --pstaff: #ea580c;
+  --pmembership: #0891b2;
+  --panalytics: #4f46e5;
+  --pcustomers: #be185d;
+  --pexternal: #6366f1;
+}
+
+.doc-header .badge { color: var(--phub); background: var(--phub-bg); }
+
+.platform-tags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.platform-tags span {
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid var(--cw-border);
+  border-radius: 4px;
+  color: var(--cw-text-muted);
+}
+
+.module.phub { border-color: #5eead4; background: linear-gradient(180deg, var(--phub-bg) 0%, #fff 50%); }
+.module.phub.hub { border-width: 2px; border-color: var(--phub); }
+.module.phub .module-num { background: var(--phub); }
+.module.phub .screen::before { background: var(--phub); }
+.module.phub .screen.hub-main {
+  border-color: var(--phub);
+  background: var(--phub-bg);
+  color: #0f766e;
+}
+
+.module.pqueue { border-color: #c4b5fd; }
+.module.pqueue .module-num { background: var(--pqueue); }
+.module.pqueue .screen::before { background: var(--pqueue); }
+
+.module.pservice { border-color: #93c5fd; }
+.module.pservice .module-num { background: var(--pservice); }
+.module.pservice .screen::before { background: var(--pservice); }
+
+.module.pstaff { border-color: #fdba74; }
+.module.pstaff .module-num { background: var(--pstaff); }
+.module.pstaff .screen::before { background: var(--pstaff); }
+
+.module.pmembership { border-color: #67e8f9; }
+.module.pmembership .module-num { background: var(--pmembership); }
+.module.pmembership .screen::before { background: var(--pmembership); }
+
+.module.panalytics { border-color: #a5b4fc; }
+.module.panalytics .module-num { background: var(--panalytics); }
+.module.panalytics .screen::before { background: var(--panalytics); }
+
+.module.pcustomers { border-color: #f9a8d4; }
+.module.pcustomers .module-num { background: var(--pcustomers); }
+.module.pcustomers .screen::before { background: var(--pcustomers); }
+
+.hub-connector { display: flex; justify-content: center; margin: 0.5rem 0 1rem; }
+.hub-connector .arrow-down { height: 32px; }
+.hub-connector .arrow-down .stem { background: var(--phub); opacity: 0.5; }
+.hub-connector .arrow-down .head { border-top-color: var(--phub); opacity: 0.5; }
+
+.spoke .screen.small { border-color: #5eead4; }
+.widget-row .screen.small { border-color: #5eead4; }
+
+.hub-label {
+  text-align: center;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--cw-text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.integration-arrow.bidir .line-h::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: -4px;
+  border: 5px solid transparent;
+  border-right-color: #7c3aed;
+}
+
+.feature-grid .screen.small { max-width: none; }
