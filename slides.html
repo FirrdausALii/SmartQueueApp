@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Car Wash Super App — Workflow Slides</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="css/shared.css" rel="stylesheet" />
+  <link href="css/slides.css" rel="stylesheet" />
+</head>
+<body class="slides-page">
+
+  <div class="site-nav-wrap">
+    <nav class="nav nav-pills app-nav flex-wrap justify-content-center gap-1 mx-auto" aria-label="App flows">
+      <a class="nav-link" href="overview.html">Overview</a>
+      <a class="nav-link active" href="slides.html">Workflow Slides</a>
+      <a class="nav-link" href="index.html">Customer App</a>
+      <a class="nav-link" href="partner.html">Partner App</a>
+      <a class="nav-link" href="admin.html">Admin Portal</a>
+    </nav>
+  </div>
+
+  <div class="slide-shell">
+    <aside class="slide-sidebar" aria-label="Slide outline">
+      <div class="slide-sidebar-header">Outline</div>
+      <ul class="slide-toc" id="slide-toc"></ul>
+    </aside>
+
+    <div class="slide-main">
+      <div class="slide-viewport" aria-live="polite">
+        <div class="slide-track" id="slide-track">
+
+          <!-- 1. INTRO -->
+          <section class="slide" data-title="Introduction" data-section="Overview">
+            <div class="slide-inner">
+              <span class="slide-label intro">Complete workflow</span>
+              <h1>Car Wash Super App</h1>
+              <p class="lead">A modular super-app connecting customers, car wash partners, and platform administrators — from onboarding to booking, queue, rewards, and business intelligence.</p>
+              <div class="slide-meta">
+                <span class="meta-pill"><strong>3</strong> apps</span>
+                <span class="meta-pill"><strong>12</strong> customer modules</span>
+                <span class="meta-pill"><strong>~25</strong> partner screens</span>
+                <span class="meta-pill"><strong>~20</strong> admin pages</span>
+                <span class="meta-pill"><strong>3</strong> dev phases</span>
+              </div>
+              <div class="highlight-box">
+                Use <strong>← →</strong> arrow keys, swipe on mobile, or the controls below. Press <strong>F</strong> for present mode.
+              </div>
+            </div>
+          </section>
+
+          <!-- 2. ECOSYSTEM -->
+          <section class="slide" data-title="Three-App Ecosystem" data-section="Overview">
+            <div class="slide-inner">
+              <span class="slide-label intro">Architecture</span>
+              <h1>Three-App Ecosystem</h1>
+              <p class="lead">Each surface serves a distinct role. Customer and Partner sync in real time; Admin governs the platform.</p>
+              <div class="eco-triangle mb-4">
+                <div class="eco-node admin">
+                  <div class="role">Platform control</div>
+                  <h3>Admin</h3>
+                  <p class="small text-muted mb-0 mt-1">Users, partners, finance, campaigns, fraud, config</p>
+                </div>
+                <div class="eco-node customer">
+                  <div class="role">End user</div>
+                  <h3>Customer</h3>
+                  <p class="small text-muted mb-0 mt-1">Book, queue, pay, rewards, membership</p>
+                </div>
+                <div class="eco-node partner">
+                  <div class="role">Shop operator</div>
+                  <h3>Partner</h3>
+                  <p class="small text-muted mb-0 mt-1">Queue, services, staff, analytics</p>
+                </div>
+              </div>
+              <div class="slide-card">
+                <h3>Real-time sync</h3>
+                <ul>
+                  <li>Customer confirms booking → Partner receives it instantly</li>
+                  <li>Queue position updates both apps live</li>
+                  <li>Admin analytics &amp; governance feed from both sides</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- 3. CUSTOMER OVERVIEW -->
+          <section class="slide" data-title="Customer App Overview" data-section="Customer App">
+            <div class="slide-inner">
+              <span class="slide-label customer">Customer App</span>
+              <h1>12 Modules · Mobile UX</h1>
+              <p class="lead">Modular customer journey — approximately 80+ screens total, organized into focused feature areas.</p>
+              <div class="module-map">
+                <div class="module-chip"><span>M1</span>Onboarding</div>
+                <div class="module-chip"><span>M2</span>Home Dashboard</div>
+                <div class="module-chip"><span>M3</span>Discovery</div>
+                <div class="module-chip"><span>M4</span>Booking</div>
+                <div class="module-chip"><span>M5</span>Live Queue</div>
+                <div class="module-chip"><span>M6</span>Rewards</div>
+                <div class="module-chip"><span>M7</span>Membership</div>
+                <div class="module-chip"><span>M8</span>Wallet</div>
+                <div class="module-chip"><span>M9</span>Vehicles</div>
+                <div class="module-chip"><span>M10</span>Notifications</div>
+                <div class="module-chip"><span>M11</span>Profile</div>
+                <div class="module-chip"><span>M12</span>Support</div>
+              </div>
+              <div class="highlight-box mt-3"><strong>M2 Home Dashboard</strong> is the control center — users should rarely need to leave it.</div>
+            </div>
+          </section>
+
+          <!-- 4. M1 -->
+          <section class="slide" data-title="M1 — Onboarding" data-section="Customer App">
+            <div class="slide-inner">
+              <span class="slide-label customer">Module 1</span>
+              <h1>Onboarding &amp; Authentication</h1>
+              <p class="lead">Allow users to register quickly while collecting enough information for future personalization.</p>
+              <div class="slide-meta"><span class="meta-pill"><strong>~8</strong> pages</span></div>
+              <div class="flow-chain">
+                <div class="flow-step">Splash Screen</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">Welcome</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">Login / Register</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">OTP Verification</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">Forgot Password <small class="text-muted">(optional)</small></div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">Vehicle Registration</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">Location &amp; Notification Permissions</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">Home Dashboard</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 5. M2 -->
+          <section class="slide" data-title="M2 — Home Dashboard" data-section="Customer App">
+            <div class="slide-inner">
+              <span class="slide-label customer">Module 2</span>
+              <h1>Home Dashboard</h1>
+              <p class="lead">The control center of the app — approximately 4 pages. Users should rarely need to leave this screen.</p>
+              <div class="slide-grid cols-2">
+                <div class="slide-card accent-customer"><h3>Queue &amp; booking</h3><ul><li>Current queue status</li><li>Nearby car washes</li><li>Quick booking</li></ul></div>
+                <div class="slide-card accent-customer"><h3>Engagement</h3><ul><li>Active promotions</li><li>Daily rewards</li><li>Challenges</li></ul></div>
+                <div class="slide-card accent-customer"><h3>Account</h3><ul><li>Membership status</li><li>Vehicle status</li></ul></div>
+                <div class="slide-card accent-customer"><h3>Design goal</h3><p>Single hub connecting all 8 menu destinations — hub-and-spoke navigation pattern.</p></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 6. M3 -->
+          <section class="slide" data-title="M3 — Discovery" data-section="Customer App">
+            <div class="slide-inner">
+              <span class="slide-label customer">Module 3</span>
+              <h1>Car Wash Discovery</h1>
+              <p class="lead">Help users find and evaluate the best shop — approximately 6 pages.</p>
+              <div class="two-col">
+                <div>
+                  <h2>Pages</h2>
+                  <div class="tag-row">
+                    <span class="tag">Nearby Shops</span><span class="tag">Map View</span><span class="tag">Shop Details</span>
+                    <span class="tag">Services</span><span class="tag">Reviews</span><span class="tag">Gallery</span>
+                  </div>
+                </div>
+                <div>
+                  <h2>Shop details show</h2>
+                  <div class="slide-card">
+                    <ul>
+                      <li>Queue length &amp; estimated waiting time</li>
+                      <li>Live occupancy</li>
+                      <li>Rating &amp; open/closed status</li>
+                      <li>Membership acceptance</li>
+                      <li>Available promotions</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <p class="highlight-box mb-0">→ Connects to <strong>Module 4 — Booking</strong></p>
+            </div>
+          </section>
+
+          <!-- 7. M4 -->
+          <section class="slide" data-title="M4 — Booking" data-section="Customer App">
+            <div class="slide-inner">
+              <span class="slide-label customer">Module 4</span>
+              <h1>Booking &amp; Smart Queue</h1>
+              <p class="lead">The heart of the platform — approximately 10 pages from shop selection to digital receipt.</p>
+              <div class="flow-chain horizontal">
+                <div class="flow-step">Choose Shop</div><div class="flow-arrow">→</div>
+                <div class="flow-step">Service</div><div class="flow-arrow">→</div>
+                <div class="flow-step">Vehicle</div><div class="flow-arrow">→</div>
+                <div class="flow-step">Time</div><div class="flow-arrow">→</div>
+                <div class="flow-step">AI Suggestion</div><div class="flow-arrow">→</div>
+                <div class="flow-step">Confirm</div><div class="flow-arrow">→</div>
+                <div class="flow-step">Payment</div><div class="flow-arrow">→</div>
+                <div class="flow-step">Queue</div><div class="flow-arrow">→</div>
+                <div class="flow-step">Arrived</div><div class="flow-arrow">→</div>
+                <div class="flow-step">Completed</div>
+              </div>
+              <div class="slide-grid cols-3 mt-3">
+                <div class="slide-card"><h3>Selection</h3><ul><li>Select service &amp; add-ons</li><li>Calendar &amp; time slot</li><li>Queue estimation</li></ul></div>
+                <div class="slide-card"><h3>Transaction</h3><ul><li>Confirm booking</li><li>Payment</li><li>Digital receipt</li></ul></div>
+                <div class="slide-card"><h3>Live</h3><ul><li>Queue status</li><li>Live progress</li><li>Completion summary</li></ul></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 8. M5 -->
+          <section class="slide" data-title="M5 — Live Queue" data-section="Customer App">
+            <div class="slide-inner">
+              <span class="slide-label customer">Module 5</span>
+              <h1>Live Queue</h1>
+              <p class="lead">Real-time queue visibility — approximately 5 pages. Keeps customers informed while they wait.</p>
+              <div class="queue-demo">
+                <div class="sub">Current Queue</div>
+                <div class="big">15 Cars</div>
+                <div class="flow-arrow">↓</div>
+                <div class="sub">You are</div>
+                <div class="big">#6</div>
+                <div class="flow-arrow">↓</div>
+                <div class="sub">Estimated</div>
+                <div class="big">26 min</div>
+              </div>
+              <div class="tag-row justify-content-center">
+                <span class="tag">Current washing stage</span>
+                <span class="tag">Cars completed today</span>
+                <span class="tag">Staff availability</span>
+                <span class="tag">Real-time updates</span>
+                <span class="tag">Push notifications</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- 9. M6 -->
+          <section class="slide" data-title="M6 — Rewards" data-section="Customer App">
+            <div class="slide-inner">
+              <span class="slide-label customer">Module 6</span>
+              <h1>Rewards &amp; Gamification</h1>
+              <p class="lead">One of the biggest differentiators — approximately 10 pages. Encourage return visits even when users don't need a wash.</p>
+              <div class="slide-grid cols-2">
+                <div class="slide-card"><h3>Core mechanics</h3><ul><li>Daily Spin</li><li>XP system &amp; Levels</li><li>Achievement badges</li><li>Mission Progress</li></ul></div>
+                <div class="slide-card"><h3>Engagement loops</h3><ul><li>Lucky Draw</li><li>Referral program</li><li>Weekly Challenges</li><li>Seasonal Events</li><li>Reward Redemption</li></ul></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 10. M7 -->
+          <section class="slide" data-title="M7 — Membership" data-section="Customer App">
+            <div class="slide-inner">
+              <span class="slide-label customer">Module 7</span>
+              <h1>Membership</h1>
+              <p class="lead">Tiered subscription plans — approximately 6 pages with subscription management.</p>
+              <div class="tier-grid mb-3">
+                <div class="tier-card free">Free</div>
+                <div class="tier-card silver">Silver</div>
+                <div class="tier-card gold">Gold</div>
+                <div class="tier-card diamond">Diamond</div>
+              </div>
+              <div class="slide-card">
+                <h3>Each plan displays</h3>
+                <div class="tag-row">
+                  <span class="tag">Benefits</span><span class="tag">Monthly savings</span>
+                  <span class="tag">Priority queue</span><span class="tag">Bonus XP</span>
+                  <span class="tag">Exclusive rewards</span><span class="tag">Subscription management</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 11. M8 -->
+          <section class="slide" data-title="M8 — Wallet" data-section="Customer App">
+            <div class="slide-inner">
+              <span class="slide-label customer">Module 8</span>
+              <h1>Wallet &amp; Payments</h1>
+              <p class="lead">Financial hub for the customer — approximately 6 pages.</p>
+              <div class="tag-row">
+                <span class="tag">Transaction history</span>
+                <span class="tag">Stored payment methods</span>
+                <span class="tag">Coupons</span>
+                <span class="tag">Promo codes</span>
+                <span class="tag">Reward credits</span>
+                <span class="tag">Refund requests</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- 12. M9 -->
+          <section class="slide" data-title="M9 — Vehicles" data-section="Customer App">
+            <div class="slide-inner">
+              <span class="slide-label customer">Module 9</span>
+              <h1>Vehicle Management</h1>
+              <p class="lead">Multiple cars supported — approximately 8 pages per vehicle profile.</p>
+              <div class="slide-grid cols-2">
+                <div class="slide-card"><h3>Vehicle profile</h3><ul><li>Plate number</li><li>Brand &amp; model</li><li>Color &amp; photo</li><li>Mileage (optional)</li></ul></div>
+                <div class="slide-card"><h3>Service history</h3><ul><li>Wash history</li><li>Wax history</li><li>Interior cleaning history</li><li>Recommended next service</li></ul></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 13. M10 -->
+          <section class="slide" data-title="M10 — Notifications" data-section="Customer App">
+            <div class="slide-inner">
+              <span class="slide-label customer">Module 10</span>
+              <h1>Notifications</h1>
+              <p class="lead">Central notification center — approximately 4 pages covering all alert types.</p>
+              <div class="tag-row">
+                <span class="tag">Booking</span><span class="tag">Queue updates</span>
+                <span class="tag">Rewards</span><span class="tag">Promotions</span>
+                <span class="tag">Membership</span><span class="tag">Challenges</span>
+                <span class="tag">Referral bonuses</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- 14. M11 -->
+          <section class="slide" data-title="M11 — Profile" data-section="Customer App">
+            <div class="slide-inner">
+              <span class="slide-label customer">Module 11</span>
+              <h1>User Profile</h1>
+              <p class="lead">Account settings and personal data — approximately 7 pages.</p>
+              <div class="slide-grid cols-2">
+                <div class="slide-card"><ul><li>Personal details</li><li>Vehicles</li><li>Addresses</li><li>Payment methods</li></ul></div>
+                <div class="slide-card"><ul><li>Privacy settings</li><li>App settings</li><li>Support access</li></ul></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 15. M12 -->
+          <section class="slide" data-title="M12 — Support" data-section="Customer App">
+            <div class="slide-inner">
+              <span class="slide-label customer">Module 12</span>
+              <h1>Support</h1>
+              <p class="lead">Help center and issue resolution — approximately 5 pages.</p>
+              <div class="flow-chain">
+                <div class="flow-step">FAQ</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">Live Chat</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">Tickets</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">Report Issues</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">Feedback</div>
+              </div>
+              <a class="slide-link mt-3 d-inline-block" href="index.html">View Customer flowchart →</a>
+            </div>
+          </section>
+
+          <!-- 16. PARTNER OVERVIEW -->
+          <section class="slide" data-title="Partner App Overview" data-section="Partner App">
+            <div class="slide-inner">
+              <span class="slide-label partner">Partner App</span>
+              <h1>Car Wash Partner App</h1>
+              <p class="lead">Owner &amp; shop operations — approximately 25 screens on mobile and web. Dashboard is the central hub.</p>
+              <div class="slide-meta">
+                <span class="meta-pill">Mobile</span>
+                <span class="meta-pill">Web</span>
+                <span class="meta-pill"><strong>Real-time</strong> customer sync</span>
+              </div>
+              <div class="module-map">
+                <div class="module-chip"><span>Hub</span>Dashboard</div>
+                <div class="module-chip"><span>Core</span>Queue Manager</div>
+                <div class="module-chip"><span>Ops</span>Service Mgmt</div>
+                <div class="module-chip"><span>Ops</span>Staff Mgmt</div>
+                <div class="module-chip"><span>Ops</span>Membership</div>
+                <div class="module-chip"><span>Ops</span>Analytics</div>
+                <div class="module-chip"><span>Ops</span>Customers</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 17. PARTNER DASHBOARD & QUEUE -->
+          <section class="slide" data-title="Dashboard &amp; Queue" data-section="Partner App">
+            <div class="slide-inner">
+              <span class="slide-label partner">Partner App</span>
+              <h1>Dashboard &amp; Queue Manager</h1>
+              <div class="two-col">
+                <div class="slide-card accent-partner">
+                  <h3>Dashboard widgets</h3>
+                  <div class="tag-row"><span class="tag">Revenue</span><span class="tag">Today's bookings</span><span class="tag">Queue status</span><span class="tag">Pending jobs</span><span class="tag">Staff</span></div>
+                  <p class="mt-2 mb-0">Navigate to all shop modules from one hub.</p>
+                </div>
+                <div class="slide-card accent-partner">
+                  <h3>Queue Manager flow</h3>
+                  <ul>
+                    <li>Booking received (from customer)</li>
+                    <li>Accept or reject booking</li>
+                    <li>Call next customer</li>
+                    <li>Delay customer (if needed)</li>
+                    <li>Complete service</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="highlight-box">↔ Syncs with Customer App: Confirm Booking ↔ Booking Received · Live Queue ↔ Queue Manager</div>
+            </div>
+          </section>
+
+          <!-- 18. PARTNER OPS -->
+          <section class="slide" data-title="Partner Operations" data-section="Partner App">
+            <div class="slide-inner">
+              <span class="slide-label partner">Partner App</span>
+              <h1>Management Modules</h1>
+              <div class="slide-grid cols-2">
+                <div class="slide-card accent-partner"><h3>Service Manager</h3><ul><li>Create services</li><li>Pricing &amp; duration</li><li>Add-ons &amp; discounts</li></ul></div>
+                <div class="slide-card accent-partner"><h3>Staff Management</h3><ul><li>Assign staff</li><li>Track workload</li><li>Performance &amp; availability</li></ul></div>
+                <div class="slide-card accent-partner"><h3>Membership</h3><ul><li>Accept member benefits</li><li>Manage packages</li><li>Promotions</li></ul></div>
+                <div class="slide-card accent-partner"><h3>Analytics</h3><ul><li>Revenue &amp; peak hours</li><li>Avg service time</li><li>Retention &amp; popular services</li></ul></div>
+                <div class="slide-card accent-partner"><h3>Customer Management</h3><ul><li>Customer history</li><li>VIP customers</li><li>Membership status &amp; notes</li></ul></div>
+              </div>
+              <a class="slide-link mt-3 d-inline-block" href="partner.html">View Partner flowchart →</a>
+            </div>
+          </section>
+
+          <!-- 19. ADMIN OVERVIEW -->
+          <section class="slide" data-title="Admin Portal Overview" data-section="Admin Portal">
+            <div class="slide-inner">
+              <span class="slide-label admin">Admin Portal</span>
+              <h1>Platform Administration</h1>
+              <p class="lead">Enterprise web console — approximately 20 pages governing the entire ecosystem.</p>
+              <div class="entity-cloud">
+                <span class="entity">Users</span><span class="entity">Partners</span><span class="entity">Transactions</span>
+                <span class="entity">Membership</span><span class="entity">Reward campaigns</span><span class="entity">Push notifications</span>
+                <span class="entity">Lucky draws</span><span class="entity">Challenges</span><span class="entity">Reports</span>
+                <span class="entity">Complaints</span><span class="entity">App configuration</span><span class="entity">Analytics</span>
+                <span class="entity">Audit logs</span><span class="entity">Support</span><span class="entity">Fraud detection</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- 20. ADMIN DETAIL -->
+          <section class="slide" data-title="Admin Module Groups" data-section="Admin Portal">
+            <div class="slide-inner">
+              <span class="slide-label admin">Admin Portal</span>
+              <h1>Module Groups</h1>
+              <div class="slide-grid cols-2">
+                <div class="slide-card accent-admin"><h3>Users &amp; Partners</h3><p>Account management, onboarding, verification, shop listings</p></div>
+                <div class="slide-card accent-admin"><h3>Finance &amp; Membership</h3><p>Transactions, refunds, settlements, tier configuration</p></div>
+                <div class="slide-card accent-admin"><h3>Engagement</h3><p>Reward campaigns, lucky draws, challenges, XP rules</p></div>
+                <div class="slide-card accent-admin"><h3>Communications</h3><p>Push notifications, segments, templates, scheduling</p></div>
+                <div class="slide-card accent-admin"><h3>Insights</h3><p>Reports, dashboards, funnels, KPIs</p></div>
+                <div class="slide-card accent-admin"><h3>Operations &amp; Trust</h3><p>Complaints, support tickets, fraud detection, audit logs</p></div>
+              </div>
+              <a class="slide-link mt-3 d-inline-block" href="admin.html">View Admin flowchart →</a>
+            </div>
+          </section>
+
+          <!-- 21. DATABASE -->
+          <section class="slide" data-title="Database Design" data-section="Platform">
+            <div class="slide-inner">
+              <span class="slide-label data">Database</span>
+              <h1>Simplified Data Model</h1>
+              <p class="lead">Modular structure — add new features without redesigning the entire database.</p>
+              <div class="entity-cloud">
+                <span class="entity">Users</span><span class="entity">Vehicles</span><span class="entity">Car Wash Shops</span>
+                <span class="entity">Bookings</span><span class="entity">Queue</span><span class="entity">Services</span>
+                <span class="entity">Staff</span><span class="entity">Memberships</span><span class="entity">Rewards</span>
+                <span class="entity">Coupons</span><span class="entity">Payments</span><span class="entity">Notifications</span>
+                <span class="entity">Achievements</span><span class="entity">XP</span><span class="entity">Challenges</span>
+                <span class="entity">Lucky Draw</span><span class="entity">Reviews</span><span class="entity">Referrals</span>
+                <span class="entity">Wallet</span><span class="entity">Transactions</span>
+              </div>
+              <div class="highlight-box">Each app module maps to one or more entities — shared core with app-specific views.</div>
+            </div>
+          </section>
+
+          <!-- 22. PHASE 1 -->
+          <section class="slide" data-title="Phase 1 — MVP" data-section="Development">
+            <div class="slide-inner">
+              <span class="slide-label phase">Development</span>
+              <h1>Phase 1 — MVP</h1>
+              <div class="phase-card phase1">
+                <h3>Prove the core concept</h3>
+                <div class="timeline">3–4 months · ~20–25 screens</div>
+                <div class="tag-row">
+                  <span class="tag">Authentication</span><span class="tag">Shop discovery</span>
+                  <span class="tag">Booking</span><span class="tag">Live queue</span>
+                  <span class="tag">Payments</span><span class="tag">Reviews</span>
+                </div>
+                <p class="mt-2 mb-0 text-muted small">Customer + Partner booking loop with basic admin oversight.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- 23. PHASE 2 -->
+          <section class="slide" data-title="Phase 2 — Retention" data-section="Development">
+            <div class="slide-inner">
+              <span class="slide-label phase">Development</span>
+              <h1>Phase 2 — Customer Retention</h1>
+              <div class="phase-card phase2">
+                <h3>Engagement &amp; loyalty</h3>
+                <div class="timeline">~20–25 additional screens</div>
+                <div class="tag-row">
+                  <span class="tag">Rewards</span><span class="tag">Membership</span>
+                  <span class="tag">Challenges</span><span class="tag">Referrals</span>
+                  <span class="tag">Wallet</span><span class="tag">Push notifications</span>
+                </div>
+                <p class="mt-2 mb-0 text-muted small">Drive repeat visits and subscription revenue.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- 24. PHASE 3 -->
+          <section class="slide" data-title="Phase 3 — Intelligence" data-section="Development">
+            <div class="slide-inner">
+              <span class="slide-label phase">Development</span>
+              <h1>Phase 3 — Intelligence &amp; Growth</h1>
+              <div class="phase-card phase3">
+                <h3>Advanced capabilities</h3>
+                <div class="timeline">~20–30 additional screens</div>
+                <div class="tag-row">
+                  <span class="tag">AI queue prediction</span><span class="tag">Dynamic pricing</span>
+                  <span class="tag">Operator analytics</span><span class="tag">Seasonal campaigns</span>
+                  <span class="tag">Smart recommendations</span><span class="tag">Marketplace slot exchange</span>
+                </div>
+                <p class="mt-2 mb-0 text-muted small">Data-driven optimization and marketplace expansion.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- 25. NEXT STEPS -->
+          <section class="slide" data-title="Explore Flowcharts" data-section="Next Steps">
+            <div class="slide-inner">
+              <span class="slide-label intro">Next steps</span>
+              <h1>Explore Interactive Flowcharts</h1>
+              <p class="lead">This slide deck summarizes the workflow. Dive into detailed screen-by-screen flowcharts for each app.</p>
+              <div class="link-row">
+                <a class="slide-link" href="overview.html">Ecosystem Overview</a>
+                <a class="slide-link" href="index.html">Customer App Flow</a>
+                <a class="slide-link" href="partner.html">Partner App Flow</a>
+                <a class="slide-link" href="admin.html">Admin Portal Flow</a>
+              </div>
+              <div class="highlight-box mt-4">
+                <strong>Total scope:</strong> ~80+ customer screens · ~25 partner screens · ~20 admin pages · 3 phased releases
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </div>
+
+      <div class="slide-controls">
+        <button type="button" class="slide-btn" id="slide-prev" aria-label="Previous slide">←</button>
+        <div class="slide-select-wrap">
+          <select class="slide-select" id="slide-select" aria-label="Jump to slide"></select>
+        </div>
+        <div class="slide-progress-wrap">
+          <div class="slide-progress-bar"><div class="slide-progress-fill" id="slide-progress-fill"></div></div>
+          <div class="slide-counter" id="slide-counter">Slide 1 of 25</div>
+        </div>
+        <div class="slide-actions">
+          <button type="button" class="slide-btn" id="slide-present" aria-label="Present mode" aria-pressed="false" title="Present mode (F)">⛶</button>
+          <button type="button" class="slide-btn" id="slide-next" aria-label="Next slide">→</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/slides.js"></script>
+</body>
+</html>
