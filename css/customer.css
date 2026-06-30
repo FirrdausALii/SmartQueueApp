@@ -1,0 +1,76 @@
+/* Customer app — module colors */
+
+:root {
+  --m1: #6366f1; --m1-bg: #eef2ff;
+  --m2: #0284c7; --m2-bg: #e0f2fe;
+  --m3: #059669; --m3-bg: #ecfdf5;
+  --m4: #7c3aed; --m4-bg: #f5f3ff;
+  --m5: #d97706; --m5-bg: #fffbeb;
+  --m6: #db2777; --m6-bg: #fdf2f8;
+  --m7: #0d9488; --m7-bg: #f0fdfa;
+  --m8: #475569; --m8-bg: #f8fafc;
+  --m9: #2563eb; --m9-bg: #eff6ff;
+  --m10: #dc2626; --m10-bg: #fef2f2;
+  --m11: #4b5563; --m11-bg: #f9fafb;
+  --m12: #65a30d; --m12-bg: #f7fee7;
+}
+
+.doc-header .badge { color: var(--m2); background: var(--m2-bg); }
+
+.module.m1 { border-color: #c7d2fe; background: linear-gradient(180deg, var(--m1-bg) 0%, #fff 40%); }
+.module.m1 .module-num { background: var(--m1); }
+.module.m1 .screen { border-color: #c7d2fe; }
+.module.m1 .screen::before { background: var(--m1); }
+
+.module.m2 { border-color: #7dd3fc; background: linear-gradient(180deg, var(--m2-bg) 0%, #fff 50%); }
+.module.m2 .module-num { background: var(--m2); }
+.module.m2 .screen::before { background: var(--m2); }
+.module.m2.hub { border-width: 2px; border-color: var(--m2); padding: 1.25rem; }
+@media (min-width: 768px) { .module.m2.hub { padding: 2rem; } }
+
+.module.m3 { border-color: #6ee7b7; }
+.module.m3 .module-num { background: var(--m3); }
+.module.m3 .screen::before { background: var(--m3); }
+
+.module.m4 { border-color: #c4b5fd; }
+.module.m4 .module-num { background: var(--m4); }
+.module.m4 .screen::before { background: var(--m4); }
+
+.module.m5 { border-color: #fcd34d; }
+.module.m5 .module-num { background: var(--m5); }
+.module.m5 .screen::before { background: var(--m5); }
+
+.module.m6 { border-color: #f9a8d4; }
+.module.m6 .module-num { background: var(--m6); }
+.module.m6 .screen::before { background: var(--m6); }
+
+.module.m7 { border-color: #5eead4; }
+.module.m7 .module-num { background: var(--m7); }
+.module.m7 .screen::before { background: var(--m7); }
+
+.module.m8 { border-color: #cbd5e1; }
+.module.m8 .module-num { background: var(--m8); }
+.module.m8 .screen::before { background: var(--m8); }
+
+.module.m9 { border-color: #93c5fd; }
+.module.m9 .module-num { background: var(--m9); }
+.module.m9 .screen::before { background: var(--m9); }
+
+.module.m10 { border-color: #fca5a5; }
+.module.m10 .module-num { background: var(--m10); }
+.module.m10 .screen::before { background: var(--m10); }
+
+.module.m11 { border-color: #d1d5db; }
+.module.m11 .module-num { background: var(--m11); }
+.module.m11 .screen::before { background: var(--m11); }
+
+.module.m12 { border-color: #bef264; }
+.module.m12 .module-num { background: var(--m12); }
+.module.m12 .screen::before { background: var(--m12); }
+
+.tier-card.free { border-color: #cbd5e1; color: var(--m8); }
+.tier-card.silver { border-color: #94a3b8; color: #64748b; }
+.tier-card.gold { border-color: #fbbf24; color: #b45309; }
+.tier-card.diamond { border-color: #67e8f9; color: #0e7490; }
+
+.rewards-grid .screen.small { max-width: none; }
