@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Car Wash Super App — Customer Mobile UX Flow</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="css/shared.css" rel="stylesheet" />
+  <link href="css/customer.css" rel="stylesheet" />
+</head>
+<body>
+  <main class="container container-lg px-3 px-md-4 py-4 py-md-5">
+
+    <nav class="nav nav-pills app-nav flex-wrap justify-content-center gap-1 mb-4 mx-auto" aria-label="App flows">
+      <a class="nav-link" href="overview.html">Overview</a>
+      <a class="nav-link active" href="index.html">Customer App</a>
+      <a class="nav-link" href="partner.html">Partner App</a>
+      <a class="nav-link" href="admin.html">Admin Portal</a>
+    </nav>
+
+    <header class="doc-header">
+      <span class="badge">UX Flow · Customer Mobile App</span>
+      <h1>Car Wash Super App</h1>
+      <p>End-to-end customer journey — vertical flows, color-coded modules, Home Dashboard as central navigation hub.</p>
+    </header>
+
+    <nav class="legend" aria-label="Module legend">
+      <span class="legend-item"><span class="legend-swatch" style="background:var(--m1)"></span>Onboarding</span>
+      <span class="legend-item"><span class="legend-swatch" style="background:var(--m2)"></span>Home Hub</span>
+      <span class="legend-item"><span class="legend-swatch" style="background:var(--m3)"></span>Discovery</span>
+      <span class="legend-item"><span class="legend-swatch" style="background:var(--m4)"></span>Booking</span>
+      <span class="legend-item"><span class="legend-swatch" style="background:var(--m5)"></span>Live Queue</span>
+      <span class="legend-item"><span class="legend-swatch" style="background:var(--m6)"></span>Rewards</span>
+      <span class="legend-item"><span class="legend-swatch" style="background:var(--m7)"></span>Membership</span>
+      <span class="legend-item"><span class="legend-swatch" style="background:var(--m8)"></span>Wallet</span>
+      <span class="legend-item"><span class="legend-swatch" style="background:var(--m9)"></span>Vehicles</span>
+      <span class="legend-item"><span class="legend-swatch" style="background:var(--m10)"></span>Notifications</span>
+      <span class="legend-item"><span class="legend-swatch" style="background:var(--m11)"></span>Profile</span>
+      <span class="legend-item"><span class="legend-swatch" style="background:var(--m12)"></span>Support</span>
+    </nav>
+
+    <!-- MODULE 1 -->
+    <section class="module m1" id="m1">
+      <div class="module-header">
+        <span class="module-num">Module 1</span>
+        <h2 class="module-title">Onboarding &amp; Authentication</h2>
+      </div>
+      <div class="v-flow">
+        <div class="screen">Splash Screen</div>
+        <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+        <div class="screen">Welcome</div>
+        <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+        <div class="screen">Login / Register</div>
+        <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+        <div class="screen">OTP Verification</div>
+        <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+        <div class="screen optional">Forgot Password</div>
+        <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+        <div class="screen">Vehicle Registration</div>
+        <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+        <div class="screen">Location &amp; Notification Permissions</div>
+        <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+        <div class="screen">Home Dashboard</div>
+      </div>
+    </section>
+
+    <!-- MODULE 2 — HUB -->
+    <section class="hub-section" id="m2">
+      <div class="module m2 hub">
+        <div class="module-header" style="justify-content:center;">
+          <span class="module-num">Module 2</span>
+          <h2 class="module-title">Home Dashboard — Main Hub</h2>
+        </div>
+
+        <div class="hub-fan">
+          <div class="screen hub-main">Home Dashboard</div>
+
+          <div class="hub-mobile-entry d-md-none">
+            <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+          </div>
+
+          <div class="hub-trunk">
+            <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+          </div>
+
+          <div class="hub-bus-wrap">
+            <div class="hub-bus" aria-hidden="true"></div>
+
+            <div class="row g-3 g-lg-0 hub-columns">
+              <div class="col-12 col-sm-6 col-lg-3 hub-column">
+                <svg class="hub-wire" viewBox="0 0 100 168" aria-hidden="true">
+                  <path d="M50 0 L50 44" />
+                  <path d="M50 44 L50 56" />
+                  <path d="M50 44 L12 44 L12 120 L50 120" />
+                </svg>
+                <div class="hub-items">
+                  <div class="screen hub-tier-a">Current Queue Status</div>
+                  <div class="screen hub-tier-b">Rewards</div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-3 hub-column">
+                <svg class="hub-wire" viewBox="0 0 100 168" aria-hidden="true">
+                  <path d="M50 0 L50 44" />
+                  <path d="M50 44 L50 56" />
+                  <path d="M50 44 L12 44 L12 120 L50 120" />
+                </svg>
+                <div class="hub-items">
+                  <div class="screen hub-tier-a">Nearby Car Washes</div>
+                  <div class="screen hub-tier-b">Challenges</div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-3 hub-column">
+                <svg class="hub-wire" viewBox="0 0 100 168" aria-hidden="true">
+                  <path d="M50 0 L50 44" />
+                  <path d="M50 44 L50 56" />
+                  <path d="M50 44 L88 44 L88 120 L50 120" />
+                </svg>
+                <div class="hub-items">
+                  <div class="screen hub-tier-a">Promotions</div>
+                  <div class="screen hub-tier-b">Vehicle Status</div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-3 hub-column">
+                <svg class="hub-wire" viewBox="0 0 100 168" aria-hidden="true">
+                  <path d="M50 0 L50 44" />
+                  <path d="M50 44 L50 56" />
+                  <path d="M50 44 L88 44 L88 120 L50 120" />
+                </svg>
+                <div class="hub-items">
+                  <div class="screen hub-tier-a">Membership</div>
+                  <div class="screen hub-tier-b">Quick Booking</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="hub-note">Central navigation hub — 4 branches from Home Dashboard, each linking 2 modules</p>
+      </div>
+    </section>
+
+    <div class="section-divider">Feature modules</div>
+
+    <div class="row g-4">
+
+      <!-- MODULE 3 -->
+      <div class="col-12 col-lg-6"><section class="module m3 h-100" id="m3">
+        <div class="module-header">
+          <span class="module-num">Module 3</span>
+          <h2 class="module-title">Car Wash Discovery</h2>
+        </div>
+        <div class="v-flow">
+          <div class="screen">Nearby Shops</div>
+          <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+          <div class="screen">Map View</div>
+          <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+          <div class="screen">Shop Details</div>
+          <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+          <div class="screen">Services</div>
+          <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+          <div class="screen">Reviews</div>
+          <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+          <div class="screen">Gallery</div>
+        </div>
+        <div class="detail-block">
+          <strong>Shop Details displays</strong>
+          <ul>
+            <li>Queue Length</li>
+            <li>Estimated Waiting Time</li>
+            <li>Live Occupancy</li>
+            <li>Rating</li>
+            <li>Open / Closed</li>
+            <li>Promotions</li>
+            <li>Membership Accepted</li>
+          </ul>
+        </div>
+        <p class="flow-link">→ Connects to Booking</p>
+      </section>
+
+      <!-- MODULE 4 -->
+      <div class="col-12 col-lg-6"><section class="module m4 h-100" id="m4">
+        <div class="module-header">
+          <span class="module-num">Module 4</span>
+          <h2 class="module-title">Booking &amp; Smart Queue</h2>
+        </div>
+        <div class="v-flow">
+          <div class="screen">Choose Shop</div>
+          <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+          <div class="screen">Choose Service</div>
+          <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+          <div class="screen">Choose Add-ons</div>
+          <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+          <div class="screen">Choose Vehicle</div>
+          <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+          <div class="screen">Choose Date &amp; Time</div>
+          <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+          <div class="screen">AI Recommendation</div>
+          <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+          <div class="screen">Queue Estimation</div>
+          <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+          <div class="screen">Confirm Booking</div>
+          <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+          <div class="screen">Payment</div>
+          <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+          <div class="screen">Queue Tracking</div>
+          <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+          <div class="screen">Arrived</div>
+          <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+          <div class="screen">Service In Progress</div>
+          <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+          <div class="screen">Completed</div>
+          <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+          <div class="screen">Digital Receipt</div>
+        </div>
+      </section>
+
+      <!-- MODULE 5 -->
+      <div class="col-12 col-lg-6"><section class="module m5 h-100" id="m5">
+        <div class="module-header">
+          <span class="module-num">Module 5</span>
+          <h2 class="module-title">Live Queue</h2>
+        </div>
+        <div class="v-flow">
+          <div class="screen">Current Queue</div>
+          <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+          <div class="screen">Queue Position</div>
+          <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+          <div class="screen">Estimated Waiting Time</div>
+          <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+          <div class="screen">Live Progress</div>
+          <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+          <div class="screen">Notifications</div>
+        </div>
+        <div class="detail-block">
+          <strong>Live display</strong>
+          <ul>
+            <li>Cars Completed Today</li>
+            <li>Staff Availability</li>
+            <li>Real-time Updates</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- MODULE 6 -->
+      <div class="col-12 col-lg-6"><section class="module m6 h-100" id="m6">
+        <div class="module-header">
+          <span class="module-num">Module 6</span>
+          <h2 class="module-title">Rewards &amp; Gamification</h2>
+        </div>
+        <div class="rewards-grid">
+          <div class="screen small">Daily Spin</div>
+          <div class="screen small">Achievement Badges</div>
+          <div class="screen small">XP System</div>
+          <div class="screen small">Levels</div>
+          <div class="screen small">Lucky Draw</div>
+          <div class="screen small">Referral</div>
+          <div class="screen small">Weekly Challenges</div>
+          <div class="screen small">Seasonal Events</div>
+          <div class="screen small">Mission Progress</div>
+          <div class="screen small">Reward Redemption</div>
+        </div>
+      </section>
+
+      <!-- MODULE 7 -->
+      <div class="col-12 col-lg-6"><section class="module m7 h-100" id="m7">
+        <div class="module-header">
+          <span class="module-num">Module 7</span>
+          <h2 class="module-title">Membership</h2>
+        </div>
+        <div class="tier-row">
+          <div class="tier-card free">Free</div>
+          <div class="tier-card silver">Silver</div>
+          <div class="tier-card gold">Gold</div>
+          <div class="tier-card diamond">Diamond</div>
+        </div>
+        <div class="detail-block">
+          <strong>Each tier displays</strong>
+          <ul>
+            <li>Benefits</li>
+            <li>Savings</li>
+            <li>Priority Queue</li>
+            <li>Bonus XP</li>
+            <li>Rewards</li>
+            <li>Subscription Management</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- MODULE 8 -->
+      <div class="col-12 col-lg-6"><section class="module m8 h-100" id="m8">
+        <div class="module-header">
+          <span class="module-num">Module 8</span>
+          <h2 class="module-title">Wallet &amp; Payments</h2>
+        </div>
+        <div class="v-flow">
+          <div class="screen">Transaction History</div>
+          <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+          <div class="screen">Stored Cards</div>
+          <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+          <div class="screen">Coupons</div>
+          <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+          <div class="screen">Promo Codes</div>
+          <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+          <div class="screen">Reward Credits</div>
+          <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+          <div class="screen">Refund Requests</div>
+        </div>
+      </section>
+
+      <!-- MODULE 9 -->
+      <div class="col-12 col-lg-6"><section class="module m9 h-100" id="m9">
+        <div class="module-header">
+          <span class="module-num">Module 9</span>
+          <h2 class="module-title">Vehicle Management</h2>
+        </div>
+        <div class="v-flow">
+          <div class="screen">Multiple Vehicles</div>
+        </div>
+        <div class="detail-block">
+          <strong>Per vehicle</strong>
+          <ul>
+            <li>Plate Number</li>
+            <li>Brand</li>
+            <li>Model</li>
+            <li>Color</li>
+            <li>Photo</li>
+            <li>Mileage</li>
+            <li>Wash History</li>
+            <li>Wax History</li>
+            <li>Interior Cleaning History</li>
+            <li>Recommended Next Service</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- MODULE 10 -->
+      <div class="col-12 col-lg-6"><section class="module m10 h-100" id="m10">
+        <div class="module-header">
+          <span class="module-num">Module 10</span>
+          <h2 class="module-title">Notifications</h2>
+        </div>
+        <div class="notif-list">
+          <div class="screen small">Booking</div>
+          <div class="screen small">Queue</div>
+          <div class="screen small">Rewards</div>
+          <div class="screen small">Promotions</div>
+          <div class="screen small">Membership</div>
+          <div class="screen small">Challenges</div>
+          <div class="screen small">Referral Bonuses</div>
+        </div>
+      </section>
+
+      <!-- MODULE 11 -->
+      <div class="col-12 col-lg-6"><section class="module m11 h-100" id="m11">
+        <div class="module-header">
+          <span class="module-num">Module 11</span>
+          <h2 class="module-title">User Profile</h2>
+        </div>
+        <div class="v-flow">
+          <div class="screen">Personal Details</div>
+          <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+          <div class="screen">Vehicles</div>
+          <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+          <div class="screen">Addresses</div>
+          <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+          <div class="screen">Payment Methods</div>
+          <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+          <div class="screen">Privacy</div>
+          <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+          <div class="screen">Settings</div>
+          <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+          <div class="screen">Support</div>
+        </div>
+      </section>
+
+      <!-- MODULE 12 -->
+      <div class="col-12 col-lg-6"><section class="module m12 h-100" id="m12">
+        <div class="module-header">
+          <span class="module-num">Module 12</span>
+          <h2 class="module-title">Support</h2>
+        </div>
+        <div class="v-flow">
+          <div class="screen">FAQ</div>
+          <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+          <div class="screen">Live Chat</div>
+          <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+          <div class="screen">Tickets</div>
+          <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+          <div class="screen">Report Issues</div>
+          <div class="arrow-down"><div class="stem"></div><div class="head"></div></div>
+          <div class="screen">Feedback</div>
+        </div>
+      </section>
+
+    </div>
+
+    <section class="ecosystem-bar" aria-labelledby="eco-links-title">
+      <h3 id="eco-links-title">Connected in the ecosystem</h3>
+      <div class="row g-3">
+        <a href="overview.html" class="col-12 col-md-4 eco-link overview d-block h-100">
+          <div class="eco-role">Full map</div>
+          <div class="eco-name">Ecosystem Overview</div>
+          <div class="eco-desc">See how Customer, Partner &amp; Admin connect</div>
+        </a>
+        <a href="partner.html" class="col-12 col-md-4 eco-link partner d-block h-100">
+          <div class="eco-role">Syncs with</div>
+          <div class="eco-name">Partner App</div>
+          <div class="eco-desc">Bookings, queue tracking, shop discovery &amp; live service status</div>
+        </a>
+        <a href="admin.html" class="col-12 col-md-4 eco-link admin d-block h-100">
+          <div class="eco-role">Governed by</div>
+          <div class="eco-name">Admin Portal</div>
+          <div class="eco-desc">Membership, rewards, campaigns, push notifications &amp; platform config</div>
+        </a>
+      </div>
+      <p class="eco-sync"><strong>Customer → Partner:</strong> Confirm Booking &amp; Payment syncs to Partner Queue Manager · Queue updates flow back to Live Queue</p>
+    </section>
+
+    <footer class="site-footer">
+      Car Wash Super App · Customer Mobile UX Flow · Presentation layout
+    </footer>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
